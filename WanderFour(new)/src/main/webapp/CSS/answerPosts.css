@@ -148,6 +148,7 @@ body{
     position: relative;
     border-radius: 10px;
     box-shadow: 1px 1px 10px rgba(193, 193, 193,0.25);
+    /* border: 1px solid #f00; */
 }
 
 .postOutsideBox{
@@ -168,15 +169,16 @@ body{
 }
 
 .postsTitle h3{
-    height: 50px;
-    line-height: 50px;
-    padding-left: 36px;
+    min-height: 30px;
+    line-height: 40px;
+    padding: 10px 36px;
+    overflow-wrap: break-word;  /*要会换行*/
     font-size: 20px;
     color: #333333;
     border-bottom: 1px solid #f7f7f7;
     box-shadow: 1px 1px 10px rgba(193, 193, 193,0.1);
 }
-
+/* ———————— 胶带 ———————— */
 .postsTitle > img{
     width: 32px;
     height: 60px;
@@ -187,8 +189,20 @@ body{
 
 /* ————————————— 当页面滑动到看不到问贴时，就出现这个 ————————————— */
 #postsHidden{
-    position: absolute;
+    position: fixed;
+    top: 0;
+    border-radius: 0;
+    background: rgba(173, 225, 217,0.95);
     display: none;
+    /* border: 1px solid #f00; */
+}
+
+/* ——————— 固定位置的胶带 ——————— */
+#postsHidden > img{
+    top: -5px;
+    right: -20px;
+    transform: rotate(90deg);
+    /* border: 1px solid #f00; */
 }
 
 /* ———————————————————— 用户信息Part ———————————————————————— */
