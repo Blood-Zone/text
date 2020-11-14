@@ -1,0 +1,20 @@
+git add 本地
+git commit -m"提交描述"
+git pull origin 远程需拉取内容的分支
+
+//有冲突时
+//当分支名后面显示MERGING时，格式为：(branch|MERGING)
+用git status查找冲突文件
+    
+<<<<<<< HEAD
+本地的内容
+=======
+远程的内容
+>>>>>>> 一串奇奇怪怪的字符（代表着远程）
+
+//再次添加、提交、上推
+git add .
+git commit -m"提交描述"
+git push origin <branch>
+    
+//冲突解决成功
